@@ -461,43 +461,25 @@
             </section>
 
             <!-- Upcoming Events -->
-            <<section id="events-page" class="page-section hidden pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 animate-fade-in-up">
-                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Join Our Community</span>
-                <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-6">Events Calendar</h1>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Stay up to date with everything happening at Salvation & Praise Fellowship. We can't wait to see you!</p>
-                <div class="h-1 w-24 bg-brand-600 mx-auto rounded-full mt-6"></div>
+    <section id="events-preview" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Don't Miss Out</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mt-2">Upcoming Events</h2>
+            <div class="h-1 w-24 bg-brand-600 mx-auto rounded-full mt-6"></div>
+        </div>
+
+        <div id="events-preview-list" class="max-w-3xl mx-auto space-y-4">
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                
-                <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gray-50">
-                    <h2 id="calendar-month-year" class="text-2xl font-bold text-gray-900">Loading...</h2>
-                    <div class="flex space-x-2">
-                        <button onclick="changeMonth(-1)" class="p-2 rounded-md hover:bg-gray-200 text-gray-600 transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-                        <button onclick="resetToToday()" class="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 shadow-sm transition-all">Today</button>
-                        <button onclick="changeMonth(1)" class="p-2 rounded-md hover:bg-gray-200 text-gray-600 transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-7 border-b border-gray-200 bg-white">
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Sun</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Mon</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Tue</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Wed</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Thu</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Fri</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Sat</div>
-                </div>
-
-                <div id="calendar-grid" class="grid grid-cols-7 bg-gray-200 gap-px">
-                    </div>
-            </div>
-            
-            <div class="mt-8 text-center text-sm text-gray-500">
-                <p><i data-lucide="info" class="w-4 h-4 inline-block mr-1"></i> Use the arrows to navigate through the months.</p>
-            </div>
-        </section>
+        <div class="mt-12 text-center">
+            <button onclick="showPage('events-page')" class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white rounded-full font-bold hover:bg-brand-600 transition-all group">
+                View Full Calendar
+                <i data-lucide="calendar" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+            </button>
+        </div>
+    </div>
+    </section>
 
             <!-- Visit / Contact Section -->
             <section id="contact" class="py-20 bg-white">
@@ -2729,162 +2711,57 @@
         </section>
 
         //Events Page
-        <section id="events-page" class="page-section hidden pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 animate-fade-in-up">
-                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Join Our Community</span>
-                <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-6">Events Calendar</h1>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Stay up to date with everything happening at Salvation & Praise Fellowship. We can't wait to see you!</p>
-                <div class="h-1 w-24 bg-brand-600 mx-auto rounded-full mt-6"></div>
+ <section id="events-page" class="page-section hidden pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-fade-in-up">
+        <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Join Our Community</span>
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-6">Events Calendar</h1>
+        
+        <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-8">
+            <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                <span class="w-3 h-3 rounded-full bg-brand-500 animate-pulse"></span>
+                <span class="text-sm font-bold text-gray-700">General Church Events</span>
             </div>
-
-            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                
-                <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gray-50">
-                    <h2 class="text-2xl font-bold text-gray-900">October</h2>
-                    <div class="flex space-x-2">
-                        <button class="p-2 rounded-md hover:bg-gray-200 text-gray-600 transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-                        <button class="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 shadow-sm transition-all">Today</button>
-                        <button class="p-2 rounded-md hover:bg-gray-200 text-gray-600 transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-7 border-b border-gray-200 bg-white">
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Sun</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Mon</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Tue</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Wed</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Thu</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Fri</div>
-                    <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Sat</div>
-                </div>
-
-                <div class="grid grid-cols-7 bg-gray-200 gap-px">
-                    
-                    <div class="bg-gray-50 min-h-[100px] sm:min-h-[140px] p-2"><span class="text-gray-400 text-sm font-medium">27</span></div>
-                    <div class="bg-gray-50 min-h-[100px] sm:min-h-[140px] p-2"><span class="text-gray-400 text-sm font-medium">28</span></div>
-                    <div class="bg-gray-50 min-h-[100px] sm:min-h-[140px] p-2"><span class="text-gray-400 text-sm font-medium">29</span></div>
-                    <div class="bg-gray-50 min-h-[100px] sm:min-h-[140px] p-2"><span class="text-gray-400 text-sm font-medium">30</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">1</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">2</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">3</span></div>
-
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors text-brand-600 font-bold"><span class="text-sm">4</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">5</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">6</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">7</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">8</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">9</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">10</span></div>
-
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors text-brand-600 font-bold"><span class="text-sm">11</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">12</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">13</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">14</span></div>
-                    
-                    <div class="bg-brand-50 min-h-[100px] sm:min-h-[140px] p-2 ring-inset ring-2 ring-brand-400 cursor-pointer">
-                        <span class="text-gray-900 text-sm font-bold">15</span>
-                        <div class="mt-1 sm:mt-2 bg-white border-l-4 border-brand-500 text-brand-700 text-[10px] sm:text-xs p-1 sm:p-1.5 rounded shadow-sm hover:shadow-md transition-all">
-                            <span class="font-bold block sm:inline">4:00p</span> Fall Family Festival
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">16</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">17</span></div>
-
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors text-brand-600 font-bold"><span class="text-sm">18</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">19</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">20</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">21</span></div>
-                    
-                    <div class="bg-blue-50 min-h-[100px] sm:min-h-[140px] p-2 ring-inset ring-2 ring-blue-400 cursor-pointer">
-                        <span class="text-gray-900 text-sm font-bold">22</span>
-                        <div class="mt-1 sm:mt-2 bg-white border-l-4 border-blue-500 text-blue-700 text-[10px] sm:text-xs p-1 sm:p-1.5 rounded shadow-sm hover:shadow-md transition-all">
-                            <span class="font-bold block sm:inline">12:30p</span> New Members Class
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">23</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">24</span></div>
-
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors text-brand-600 font-bold"><span class="text-sm">25</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">26</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">27</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">28</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">29</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">30</span></div>
-                    <div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors"><span class="text-gray-900 text-sm font-medium">31</span></div>
-                </div>
-            </div>
-            
-            <div class="mt-8 text-center text-sm text-gray-500">
-                <p><i data-lucide="info" class="w-4 h-4 inline-block mr-1"></i> Click on any event block for more details.</p>
-            </div>
-        </section>
-
-    <!-- Footer -->
-    <footer class="bg-brand-900 text-white pt-16 pb-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i data-lucide="church" class="h-8 w-8 text-brand-600"></i>
-                        <span class="font-serif font-bold text-xl leading-tight">Salvation & Praise <br/>Fellowship</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Loving God, Loving People, and Serving the World.
-                    </p>
-                    <div class="flex gap-4 mt-6">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" onclick="event.preventDefault(); showPage('home-page')" class="hover:text-brand-300 transition-colors">Home</a></li>
-                        <li><a href="#" onclick="event.preventDefault(); showPage('mission-vision')" class="hover:text-brand-300 transition-colors">About Us</a></li>
-                        <li><a href="#ministries" onclick="showPage('home-page')" class="hover:text-brand-300 transition-colors">Ministries</a></li>
-                        <li><a href="#" onclick="event.preventDefault(); showPage('events-page')" class="hover:text-brand-300 transition-colors">Events Calendar</a></li>
-                        <li><a href="#sermons" onclick="showPage('home-page')" class="hover:text-brand-300 transition-colors">Sermons</a></li>
-                        <li><a href="#" onclick="event.preventDefault(); showPage('give-page')" class="hover:text-brand-300 transition-colors">Give Online</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Ministries</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-brand-300 transition-colors">Grace Kids</a></li>
-                        <li><a href="#" class="hover:text-brand-300 transition-colors">Elevate Youth</a></li>
-                        <li><a href="#" class="hover:text-brand-300 transition-colors">Life Groups</a></li>
-                        <li><a href="#" class="hover:text-brand-300 transition-colors">Outreach</a></li>
-                        <li><a href="#" class="hover:text-brand-300 transition-colors">Care & Prayer</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Service Times</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li class="flex justify-between"><span>1st Service</span> <span>6:00 AM</span></li>
-                        <li class="flex justify-between"><span>2nd Service</span> <span>9:00 AM</span></li>
-                        <li class="flex justify-between"><span>Online Stream</span> <span>9:00 AM</span></li>
-                        <li class="mt-4 pt-4 border-t border-gray-800 text-xs">
-                            Bernard Avenue<br>Ozamiz, Misamis Occidental 7200
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                <p>&copy; 2023 Salvation & Praise Fellowship. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Use</a>
-                </div>
+            <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+                <span class="text-sm font-bold text-gray-700">Ministry / Departmental</span>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden w-full">
+        
+        <div id="calendar-grid-wrapper">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gray-50">
+                <h2 id="calendar-month-year" class="text-2xl font-bold text-gray-900 font-serif">Loading...</h2>
+                <div class="flex space-x-2">
+                    <button onclick="changeMonth(-1)" class="p-2 rounded-md hover:bg-gray-200 text-gray-600 transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                    <button onclick="resetToToday()" class="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 shadow-sm transition-all">Today</button>
+                    <button onclick="changeMonth(1)" class="p-2 rounded-md hover:bg-gray-200 text-gray-600 transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-7 border-b border-gray-200 bg-white">
+                <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Sun</div>
+                <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Mon</div>
+                <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Tue</div>
+                <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Wed</div>
+                <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Thu</div>
+                <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Fri</div>
+                <div class="py-3 text-center text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Sat</div>
+            </div>
+
+            <div id="calendar-grid" class="grid grid-cols-7 bg-gray-200 gap-px">
+                </div>
+        </div>
+
+        <div id="calendar-list-wrapper" class="hidden bg-gray-50 p-6 sm:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 font-serif mb-6 border-b border-gray-200 pb-4">All Upcoming Events</h2>
+            <div id="calendar-list-container" class="space-y-4 max-w-4xl mx-auto">
+                </div>
+        </div>
+
+    </div>
+</section>
 
     <script>
         // Initialize Icons
@@ -3109,59 +2986,71 @@
             { date: '2026-12-18', title: 'Pastor\'s Christmas', time: '10:00 AM', color: 'brand' }
         ];
 
-        function renderCalendar() {
-            const grid = document.getElementById('calendar-grid');
-            const header = document.getElementById('calendar-month-year');
-            grid.innerHTML = ''; // Clear previous
+function renderCalendar() {
+    const grid = document.getElementById('calendar-grid');
+    const header = document.getElementById('calendar-month-year');
+    if (!grid || !header) return;
+    
+    grid.innerHTML = ''; // Clear previous
 
-            const year = currentCalDate.getFullYear();
-            const month = currentCalDate.getMonth();
+    const year = currentCalDate.getFullYear();
+    const month = currentCalDate.getMonth();
 
-            // Set Header
-            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            header.textContent = `${monthNames[month]} ${year}`;
+    // Set Header
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    header.textContent = `${monthNames[month]} ${year}`;
 
-            // Calculate days
-            const firstDay = new Date(year, month, 1).getDay();
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-            const daysInPrevMonth = new Date(year, month, 0).getDate();
+    // Calculate days
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
 
-            // Previous month's trailing days
-            for (let i = firstDay - 1; i >= 0; i--) {
-                grid.innerHTML += `<div class="bg-gray-50 min-h-[100px] sm:min-h-[140px] p-2"><span class="text-gray-400 text-sm font-medium">${daysInPrevMonth - i}</span></div>`;
-            }
+    // THE FIX: We use a hardcoded inline style so it cannot be ignored by Tailwind
+    // We also use exactly 42 cells (6 rows) every single time.
+    const cellStyle = "height: 130px; max-height: 130px;";
+    const emptyCellClass = "bg-gray-50 p-2 w-full";
 
-            // Current month's days
-            for (let day = 1; day <= daysInMonth; day++) {
-                // Check for events
-                const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                const dayEvents = churchEvents.filter(e => e.date === dateString);
+    // 1. Previous month's trailing days
+    for (let i = firstDay - 1; i >= 0; i--) {
+        grid.innerHTML += `<div class="${emptyCellClass}" style="${cellStyle}"><span class="text-gray-400 text-sm font-medium">${daysInPrevMonth - i}</span></div>`;
+    }
 
-                let dayHTML = `<div class="bg-white min-h-[100px] sm:min-h-[140px] p-2 hover:bg-gray-50 transition-colors ${dayEvents.length > 0 ? 'ring-inset ring-2 ring-brand-400' : ''}">`;
-                dayHTML += `<span class="text-gray-900 text-sm font-medium ${dayEvents.length > 0 ? 'font-bold' : ''}">${day}</span>`;
+    // 2. Current month's days
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const dayEvents = churchEvents.filter(e => e.date === dateString);
 
-                // Render events inside the day box
-                if (dayEvents.length > 0) {
-                    dayEvents.forEach(evt => {
-                        const colorCode = evt.color === 'blue' ? 'blue' : 'brand';
-                        dayHTML += `
-                        <div class="mt-1 sm:mt-2 bg-white border-l-4 border-${colorCode}-500 text-${colorCode}-700 text-[10px] sm:text-xs p-1 sm:p-1.5 rounded shadow-sm hover:shadow-md transition-all truncate">
-                            <span class="font-bold block sm:inline">${evt.time}</span> <span title="${evt.title}">${evt.title}</span>
-                        </div>`;
-                    });
-                }
-                dayHTML += `</div>`;
-                grid.innerHTML += dayHTML;
-            }
+        // Active Cell Classes: Added overflow-y-auto so a busy day will scroll inside its own box
+        let dayHTML = `<div class="bg-white w-full p-2 overflow-y-auto flex flex-col hover:bg-gray-50 transition-colors ${dayEvents.length > 0 ? 'ring-inset ring-2 ring-brand-400' : ''}" style="${cellStyle}">`;
+        
+        // Date Number
+        dayHTML += `<span class="text-gray-900 text-sm mb-1 flex-shrink-0 sticky top-0 bg-white/90 backdrop-blur-sm z-10 ${dayEvents.length > 0 ? 'font-bold' : 'font-medium'}">${day}</span>`;
 
-            // Next month's leading days
-            const totalCells = firstDay + daysInMonth;
-            const remainingCells = 42 - totalCells; // Standard 6-row grid
-            
-            for (let i = 1; i <= remainingCells; i++) {
-                grid.innerHTML += `<div class="bg-gray-50 min-h-[100px] sm:min-h-[140px] p-2"><span class="text-gray-400 text-sm font-medium">${i}</span></div>`;
-            }
+        // Render events
+        if (dayEvents.length > 0) {
+            dayHTML += `<div class="space-y-1">`;
+            dayEvents.forEach(evt => {
+                const colorCode = evt.color === 'blue' ? 'blue' : 'brand';
+                dayHTML += `
+                <div class="bg-white border-l-4 border-${colorCode}-500 text-${colorCode}-700 text-[10px] sm:text-xs p-1 rounded shadow-sm hover:shadow-md transition-all truncate w-full">
+                    <span class="font-bold block sm:inline">${evt.time}</span> <span title="${evt.title}">${evt.title}</span>
+                </div>`;
+            });
+            dayHTML += `</div>`;
         }
+        dayHTML += `</div>`;
+        grid.innerHTML += dayHTML;
+    }
+
+    // 3. Next month's leading days
+    const totalCells = firstDay + daysInMonth;
+    // ALWAYS render exactly 42 cells total (6 full rows) so the calendar never shrinks
+    const remainingCells = 42 - totalCells; 
+    
+    for (let i = 1; i <= remainingCells; i++) {
+        grid.innerHTML += `<div class="${emptyCellClass}" style="${cellStyle}"><span class="text-gray-400 text-sm font-medium">${i}</span></div>`;
+    }
+}
 
         function changeMonth(direction) {
             currentCalDate.setMonth(currentCalDate.getMonth() + direction);
@@ -3176,6 +3065,152 @@
         // Initialize calendar on load
         renderCalendar();
 
+        // 1. Define the preview function
+        function renderEventsPreview() {
+            const previewContainer = document.getElementById('events-preview-list');
+            
+            // If the container isn't on the page, stop running to prevent errors
+            if (!previewContainer) return;
+
+            // Get today's date to filter out past events
+            const today = new Date().toISOString().split('T')[0];
+            
+            // Filter and sort the churchEvents array
+            const upcoming = churchEvents
+                .filter(event => event.date >= today)
+                .sort((a, b) => new Date(a.date) - new Date(b.date))
+                .slice(0, 3);
+
+            // Inject the HTML into the container
+            previewContainer.innerHTML = upcoming.map(event => `
+                <div class="bg-white p-5 rounded-2xl border-2 border-gray-200 border-l-4 border-l-brand-600 shadow-sm hover:shadow-lg hover:border-brand-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group">
+                    <div class="flex items-center gap-5">
+                        <div class="bg-brand-50 text-brand-600 px-4 py-2 rounded-xl text-center min-w-[80px] border border-brand-100">
+                            <span class="block text-xs font-bold uppercase tracking-tighter">
+                                ${new Date(event.date).toLocaleDateString('en-US', { month: 'short' })}
+                            </span>
+                            <span class="block text-2xl font-black">
+                                ${new Date(event.date).toLocaleDateString('en-US', { day: 'numeric' })}
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors">${event.title}</h3>
+                            <div class="flex items-center gap-2 text-gray-500 text-sm mt-1 font-medium">
+                                <i data-lucide="clock" class="w-4 h-4 text-brand-500"></i>
+                                ${event.time}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right sm:block hidden">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest bg-gray-50 px-3 py-1 rounded-full border border-gray-200">
+                            ${new Date(event.date).getFullYear()}
+                        </span>
+                    </div>
+                </div>
+            `).join('');
+
+            // Re-initialize icons so the clock icon shows up
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        // 2. Call the function so it actually runs on page load
+        renderEventsPreview();
+
+        // --- CALENDAR TOGGLE & LIST VIEW LOGIC ---
+        
+        function setCalView(viewType) {
+            const gridWrapper = document.getElementById('calendar-grid-wrapper');
+            const listWrapper = document.getElementById('calendar-list-wrapper');
+            const gridBtn = document.getElementById('grid-view-btn');
+            const listBtn = document.getElementById('list-view-btn');
+
+            if (viewType === 'grid') {
+                // Show Grid, Hide List
+                gridWrapper.classList.remove('hidden');
+                listWrapper.classList.add('hidden');
+                
+                // Active button styling for Grid
+                gridBtn.className = "px-6 py-2.5 rounded-full bg-brand-600 text-white text-sm font-bold shadow-md transition-all";
+                listBtn.className = "px-6 py-2.5 rounded-full bg-white border-2 border-gray-200 text-gray-600 text-sm font-bold hover:bg-gray-50 transition-all";
+            } else {
+                // Show List, Hide Grid
+                gridWrapper.classList.add('hidden');
+                listWrapper.classList.remove('hidden');
+                
+                // Active button styling for List
+                listBtn.className = "px-6 py-2.5 rounded-full bg-brand-600 text-white text-sm font-bold shadow-md transition-all";
+                gridBtn.className = "px-6 py-2.5 rounded-full bg-white border-2 border-gray-200 text-gray-600 text-sm font-bold hover:bg-gray-50 transition-all";
+                
+                // Render the list when switched
+                renderFullEventsList();
+            }
+        }
+
+        function renderFullEventsList() {
+            const listContainer = document.getElementById('calendar-list-container');
+            if (!listContainer) return;
+
+            // Get today's date for filtering
+            const today = new Date().toISOString().split('T')[0];
+            
+            // Filter out past events, then sort chronologically
+            const upcoming = churchEvents
+                .filter(event => event.date >= today)
+                .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            if (upcoming.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="text-center py-12">
+                        <i data-lucide="calendar-x" class="w-12 h-12 text-gray-300 mx-auto mb-3"></i>
+                        <p class="text-gray-500 font-medium text-lg">No upcoming events scheduled at this time.</p>
+                    </div>`;
+                lucide.createIcons();
+                return;
+            }
+
+            listContainer.innerHTML = upcoming.map(event => {
+                // Handle different colors for events (Blue vs Brand/Red)
+                const isBlue = event.color === 'blue';
+                const borderColorClass = isBlue ? 'border-l-blue-500 hover:border-blue-300' : 'border-l-brand-600 hover:border-brand-300';
+                const badgeBgClass = isBlue ? 'bg-blue-50 text-blue-600 border-blue-100' : 'bg-brand-50 text-brand-600 border-brand-100';
+                const titleHoverClass = isBlue ? 'group-hover:text-blue-600' : 'group-hover:text-brand-600';
+                const iconColorClass = isBlue ? 'text-blue-500' : 'text-brand-500';
+
+                return `
+                <div class="bg-white p-5 rounded-2xl border-2 border-gray-200 border-l-4 ${borderColorClass} shadow-sm hover:shadow-lg transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group">
+                    <div class="flex items-center gap-5">
+                        <div class="${badgeBgClass} px-4 py-2 rounded-xl text-center min-w-[80px] border">
+                            <span class="block text-xs font-bold uppercase tracking-tighter">
+                                ${new Date(event.date).toLocaleDateString('en-US', { month: 'short' })}
+                            </span>
+                            <span class="block text-2xl font-black">
+                                ${new Date(event.date).toLocaleDateString('en-US', { day: 'numeric' })}
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 ${titleHoverClass} transition-colors">${event.title}</h3>
+                            <div class="flex items-center gap-2 text-gray-500 text-sm mt-1 font-medium">
+                                <i data-lucide="clock" class="w-4 h-4 ${iconColorClass}"></i>
+                                ${event.time}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right sm:block hidden">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest bg-gray-50 px-3 py-1 rounded-full border border-gray-200">
+                            ${new Date(event.date).getFullYear()}
+                        </span>
+                    </div>
+                </div>
+                `;
+            }).join('');
+
+            // Re-initialize icons for the newly injected HTML
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
     </script>
 </body>
 </html>

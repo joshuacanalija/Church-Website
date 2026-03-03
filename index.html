@@ -2711,7 +2711,7 @@
         </section>
 
         //Events Page
- <section id="events-page" class="page-section hidden pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="events-page" class="page-section hidden pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12 animate-fade-in-up">
         <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Join Our Community</span>
         <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-6">Events Calendar</h1>
@@ -2728,8 +2728,7 @@
         </div>
     </div>
 
-    <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden w-full">
-        
+    <div id="calendar-main-view" class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden w-full">
         <div id="calendar-grid-wrapper">
             <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gray-50">
                 <h2 id="calendar-month-year" class="text-2xl font-bold text-gray-900 font-serif">Loading...</h2>
@@ -2759,7 +2758,50 @@
             <div id="calendar-list-container" class="space-y-4 max-w-4xl mx-auto">
                 </div>
         </div>
+    </div>
 
+    <div id="event-detail-view" class="hidden max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden mt-8">
+        <button onclick="closeEvent()" class="m-6 flex items-center gap-2 text-gray-500 hover:text-brand-600 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Calendar
+        </button>
+        <div class="bg-brand-600 p-8 text-white relative">
+            <h2 id="detail-title" class="text-3xl font-bold mb-2">Event Title</h2>
+            <p id="detail-date" class="text-brand-100 font-medium text-lg">Date</p>
+        </div>
+        <div class="p-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">About the Event</h3>
+                        <p id="detail-desc" class="text-gray-600 leading-relaxed">
+                            Description goes here.
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-brand-50 p-6 rounded-xl border border-brand-100">
+                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i data-lucide="info" class="w-4 h-4 text-brand-600"></i> Event Info
+                        </h4>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase mb-1">Time</p>
+                                <p id="detail-time" class="font-semibold text-gray-800">Time</p>
+                            </div>
+                            <div class="border-t border-gray-200 pt-3">
+                                <p class="text-xs font-bold text-gray-400 uppercase mb-1">Location</p>
+                                <p id="detail-place" class="font-semibold text-gray-800">Location</p>
+                            </div>
+                            <div class="border-t border-gray-200 pt-4 mt-2">
+                                <a href="#contact" onclick="showPage('home-page')" class="w-full block text-center bg-brand-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-brand-700 transition-colors shadow-sm">
+                                    Got Questions? Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -2964,27 +3006,170 @@
         // Check every minute just in case
         setInterval(checkLiveStatus, 60000);
 
-        // --- DYNAMIC EVENTS CALENDAR LOGIC ---
-        let currentCalDate = new Date(2026, 3, 1); // Starts at April 2026
+// --- DYNAMIC EVENTS CALENDAR LOGIC ---
+let currentCalDate = new Date(); // Automatically sets to the current month
 
-        const churchEvents = [
-            { date: '2026-04-03', title: 'Siete Palabras', time: '1:00 PM', color: 'brand' },
-            { date: '2026-04-05', title: 'Sunrise Service', time: '4:30 AM', color: 'brand' },
-            { date: '2026-05-21', title: 'Men\'s Seminar', time: '8:30 AM', color: 'blue' },
-            { date: '2026-05-22', title: 'Men\'s Seminar', time: '8:30 AM', color: 'blue' },
-            { date: '2026-05-23', title: 'Healing Crusade', time: '1:00 PM', color: 'brand' },
-            { date: '2026-05-26', title: 'Youth Convention', time: 'All Day', color: 'blue' },
-            { date: '2026-05-27', title: 'Youth Convention', time: 'All Day', color: 'blue' },
-            { date: '2026-05-28', title: 'Youth Convention', time: 'All Day', color: 'blue' },
-            { date: '2026-05-29', title: 'Youth Convention', time: 'All Day', color: 'blue' },
-            { date: '2026-06-28', title: '44th Anniversary', time: 'Service Time', color: 'brand' },
-            { date: '2026-10-25', title: 'Pastor\'s Appreciation', time: 'Service Time', color: 'brand' },
-            { date: '2026-11-01', title: 'Youth Day', time: '8:00 AM', color: 'blue' },
-            { date: '2026-11-29', title: 'Thanksgiving', time: '1st & 2nd Service', color: 'brand' },
-            { date: '2026-12-06', title: 'Youth Christmas', time: '5:00 PM', color: 'blue' },
-            { date: '2026-12-16', title: 'Workers\' Christmas', time: '1:00 PM', color: 'brand' },
-            { date: '2026-12-18', title: 'Pastor\'s Christmas', time: '10:00 AM', color: 'brand' }
-        ];
+// Event Data array with added ID, fullTime, place, and detailed description from the PDF
+const churchEvents = [
+    { id: 'evt-1', date: '2026-04-03', title: 'Siete Palabras Service', time: '1:00 PM', fullTime: '1:00 PM - 4:00 PM', place: 'Salvation & Praise Fellowship Center', color: 'brand', desc: 'A solemn Good Friday service reflecting on the Seven Last Words of our Lord Jesus Christ on the cross. This sacred gathering will lead us into deep meditation, worship, and gratitude for Christ\'s sacrifice and redeeming love.' },
+    { id: 'evt-2', date: '2026-04-05', title: 'Sunrise Service', time: '4:30 AM', fullTime: '4:30 AM - 7:00 AM', place: 'Salvation & Praise Fellowship Center (Church Ground)', color: 'brand', desc: 'Join us at dawn as we celebrate the victorious resurrection of our Lord and Savior. This special early morning worship service will be filled with praise, thanksgiving, and a powerful message of hope in the risen Christ.' },
+    { id: 'evt-3', date: '2026-05-21', title: 'Men\'s Seminar', time: '8:30 AM', fullTime: '1st Session: 8:30 AM-11:00 AM | 2nd Session: 1:00 PM-3:00 PM | 3rd Session: 6:00 PM-8:30 PM', place: 'Salvation & Praise Fellowship Center', color: 'blue', desc: 'A two-day seminar designed to strengthen men spiritually, emotionally, and biblically. This gathering will equip fathers, leaders, and young men to stand firm in faith, lead their families well, and serve faithfully in ministry.' },
+    { id: 'evt-4', date: '2026-05-22', title: 'Men\'s Seminar', time: '8:30 AM', fullTime: '1st Session: 8:30 AM-11:00 AM | 2nd Session: 1:00 PM-3:00 PM | 3rd Session: 6:00 PM-8:30 PM', place: 'Salvation & Praise Fellowship Center', color: 'blue', desc: 'A two-day seminar designed to strengthen men spiritually, emotionally, and biblically. This gathering will equip fathers, leaders, and young men to stand firm in faith, lead their families well, and serve faithfully in ministry.' },
+    { id: 'evt-5', date: '2026-05-23', title: 'Healing Crusade', time: '1:00 PM', fullTime: '1:00 PM - 4:00 PM', place: 'Del Pilar, Baliangao, Misamis Occidental', color: 'brand', desc: 'A powerful evangelistic and healing crusade proclaiming the Gospel of the Lord Jesus Christ. Expect anointed preaching, prayer for the sick, deliverance, and a call for salvation as we believe God for miracles and transformed lives.' },
+    { id: 'evt-6', date: '2026-05-26', title: 'Youth Convention', time: 'All Day', fullTime: 'All Day', place: 'Salvation & Praise Fellowship Center', color: 'blue', desc: 'A multi-day gathering empowering the next generation to live boldly for Christ. Through dynamic preaching, worship, fellowship, and workshops, our youth will be challenged to grow in holiness, leadership, and purpose.' },
+    { id: 'evt-7', date: '2026-05-27', title: 'Youth Convention', time: 'All Day', fullTime: 'All Day', place: 'Salvation & Praise Fellowship Center', color: 'blue', desc: 'A multi-day gathering empowering the next generation to live boldly for Christ. Through dynamic preaching, worship, fellowship, and workshops, our youth will be challenged to grow in holiness, leadership, and purpose.' },
+    { id: 'evt-8', date: '2026-05-28', title: 'Youth Convention', time: 'All Day', fullTime: 'All Day', place: 'Salvation & Praise Fellowship Center', color: 'blue', desc: 'A multi-day gathering empowering the next generation to live boldly for Christ. Through dynamic preaching, worship, fellowship, and workshops, our youth will be challenged to grow in holiness, leadership, and purpose.' },
+    { id: 'evt-9', date: '2026-05-29', title: 'Youth Convention', time: 'All Day', fullTime: 'All Day', place: 'Salvation & Praise Fellowship Center', color: 'blue', desc: 'A multi-day gathering empowering the next generation to live boldly for Christ. Through dynamic preaching, worship, fellowship, and workshops, our youth will be challenged to grow in holiness, leadership, and purpose.' },
+    { id: 'evt-10', date: '2026-06-28', title: '44th Church Anniversary', time: 'Reg. Schedule', fullTime: 'Regular Service Schedule', place: 'Salvation & Praise Fellowship Center', color: 'brand', desc: 'Join us as we celebrate 44 years of God\'s faithfulness to our church. This special anniversary service will highlight testimonies, thanksgiving, and a powerful message as we honor the Lord for His goodness through the years.' },
+    { id: 'evt-11', date: '2026-10-25', title: 'Pastor\'s Appreciation', time: 'Reg. Schedule', fullTime: 'Regular Service Schedule', place: 'Church Sanctuary', color: 'brand', desc: 'A special Sunday dedicated to honoring and appreciating our Pastor for his faithful leadership, prayer, sacrifice, and commitment to shepherding the church.' },
+    { id: 'evt-12', date: '2026-11-01', title: 'Youth Day', time: '8:00 AM', fullTime: '8:00 AM to 5:00 PM', place: 'Kalilangan Spring Resort (Tubod Lanao Del Norte)', color: 'blue', desc: 'Youth Day is a special gathering focused on team building, leadership development, fellowship, and spiritual strengthening. This event is designed to unite our youth leaders, build stronger relationships, and cultivate unity in vision and purpose. Through interactive activities, encouragement from the Word of God, and meaningful fellowship, we aim to develop committed, spiritually grounded leaders.' },
+    { id: 'evt-13', date: '2026-11-29', title: 'Thanksgiving Sunday', time: '1st/2nd Service', fullTime: '1st and 2nd Services', place: 'Salvation & Praise Fellowship Center', color: 'brand', desc: 'A joyful celebration of gratitude to the Lord for His provision, protection, and blessings throughout the year. Come with a thankful heart as we offer praise and thanksgiving unto God.' },
+    { id: 'evt-14', date: '2026-12-06', title: 'Youth Christmas', time: '5:00 PM', fullTime: '5:00 PM to 8:00 PM', place: 'Salvation & Praise Fellowship Center', color: 'blue', desc: 'A youth-led Christmas celebration filled with music, presentations, fellowship, and a reminder of the true meaning of Christmas—the birth of our Lord Jesus Christ.' },
+    { id: 'evt-15', date: '2026-12-16', title: 'Workers\' Christmas', time: '1:00 PM', fullTime: '1:00 PM to 4:00 PM', place: 'Salvation & Praise Fellowship Center', color: 'brand', desc: 'A special Christmas gathering honoring our faithful church workers. A time of appreciation, fellowship, and rejoicing in Christ\'s birth together.' },
+    { id: 'evt-16', date: '2026-12-18', title: 'Pastor\'s Christmas', time: '10:00 AM', fullTime: '10:00 AM to 12:00 PM', place: 'Salvation & Praise Fellowship Center', color: 'brand', desc: 'A heartfelt Christmas celebration dedicated to blessing and honoring our Pastor and family during the Christmas season, expressing gratitude for their faithful service throughout the year.' }
+];
+
+// Open Event Detail logic
+function openEvent(eventId) {
+    const event = churchEvents.find(e => e.id === eventId);
+    if (!event) return;
+
+    // Hide Calendar View
+    document.getElementById('calendar-main-view').classList.add('hidden');
+    
+    // Populate Detail View
+    document.getElementById('detail-title').textContent = event.title;
+    const eventDate = new Date(event.date);
+    document.getElementById('detail-date').textContent = eventDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('detail-desc').textContent = event.desc;
+    document.getElementById('detail-time').textContent = event.fullTime;
+    document.getElementById('detail-place').textContent = event.place;
+
+    // Show Detail View
+    document.getElementById('event-detail-view').classList.remove('hidden');
+
+    // Smooth Scroll to Top of Events Page
+    document.getElementById('events-page').scrollIntoView({ behavior: 'smooth' });
+    lucide.createIcons();
+}
+
+// Close Event Detail logic
+function closeEvent() {
+    // Hide Detail View
+    document.getElementById('event-detail-view').classList.add('hidden');
+    // Show Calendar View
+    document.getElementById('calendar-main-view').classList.remove('hidden');
+}
+
+// Ensure the calendar cells trigger the openEvent function
+function renderCalendar() {
+    const grid = document.getElementById('calendar-grid');
+    const header = document.getElementById('calendar-month-year');
+    if (!grid || !header) return;
+    
+    grid.innerHTML = ''; // Clear previous
+
+    const year = currentCalDate.getFullYear();
+    const month = currentCalDate.getMonth();
+    const today = new Date();
+
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    header.textContent = `${monthNames[month]} ${year}`;
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
+
+    const cellStyle = "height: 130px; max-height: 130px;";
+    const emptyCellClass = "bg-gray-50 p-2 w-full";
+
+    for (let i = firstDay - 1; i >= 0; i--) {
+        grid.innerHTML += `<div class="${emptyCellClass}" style="${cellStyle}"><span class="text-gray-400 text-sm font-medium">${daysInPrevMonth - i}</span></div>`;
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const dayEvents = churchEvents.filter(e => e.date === dateString);
+        
+        // Highlight Today UX improvement
+        const isToday = (day === today.getDate() && month === today.getMonth() && year === today.getFullYear());
+        const todayStyling = isToday ? 'bg-brand-50 border-2 border-brand-500 rounded-lg' : 'bg-white';
+        const dayTextStyling = isToday ? 'text-brand-600 font-bold bg-brand-100 rounded-full w-6 h-6 flex items-center justify-center' : 'text-gray-900';
+
+        let dayHTML = `<div class="${todayStyling} w-full p-2 overflow-y-auto flex flex-col hover:bg-gray-50 transition-colors ${dayEvents.length > 0 ? 'ring-inset ring-1 ring-brand-200' : ''}" style="${cellStyle}">`;
+        
+        dayHTML += `<span class="text-sm mb-1 flex-shrink-0 sticky top-0 bg-transparent z-10 ${dayEvents.length > 0 && !isToday ? 'font-bold' : 'font-medium'} ${dayTextStyling}">${day}</span>`;
+
+        if (dayEvents.length > 0) {
+            dayHTML += `<div class="space-y-1">`;
+            dayEvents.forEach(evt => {
+                const colorCode = evt.color === 'blue' ? 'blue' : 'brand';
+                // Added cursor-pointer and onclick
+                dayHTML += `
+                <div onclick="openEvent('${evt.id}')" class="cursor-pointer bg-white border-l-4 border-${colorCode}-500 text-${colorCode}-700 text-[10px] sm:text-xs p-1 rounded shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all truncate w-full">
+                    <span class="font-bold block sm:inline">${evt.time}</span> <span title="${evt.title}">${evt.title}</span>
+                </div>`;
+            });
+            dayHTML += `</div>`;
+        }
+        dayHTML += `</div>`;
+        grid.innerHTML += dayHTML;
+    }
+
+    const totalCells = firstDay + daysInMonth;
+    const remainingCells = 42 - totalCells; 
+    
+    for (let i = 1; i <= remainingCells; i++) {
+        grid.innerHTML += `<div class="${emptyCellClass}" style="${cellStyle}"><span class="text-gray-400 text-sm font-medium">${i}</span></div>`;
+    }
+}
+
+function changeMonth(direction) {
+    currentCalDate.setMonth(currentCalDate.getMonth() + direction);
+    renderCalendar();
+}
+
+function resetToToday() {
+    currentCalDate = new Date(); 
+    renderCalendar();
+}
+
+// Update renderEventsPreview to also be clickable
+function renderEventsPreview() {
+    const previewContainer = document.getElementById('events-preview-list');
+    if (!previewContainer) return;
+    const today = new Date().toISOString().split('T')[0];
+    
+    const upcoming = churchEvents
+        .filter(event => event.date >= today)
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
+        .slice(0, 3);
+
+    previewContainer.innerHTML = upcoming.map(event => `
+        <div onclick="showPage('events-page'); openEvent('${event.id}')" class="cursor-pointer bg-white p-5 rounded-2xl border-2 border-gray-200 border-l-4 border-l-brand-600 shadow-sm hover:shadow-lg hover:border-brand-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group">
+            <div class="flex items-center gap-5">
+                <div class="bg-brand-50 text-brand-600 px-4 py-2 rounded-xl text-center min-w-[80px] border border-brand-100">
+                    <span class="block text-xs font-bold uppercase tracking-tighter">${new Date(event.date).toLocaleDateString('en-US', { month: 'short' })}</span>
+                    <span class="block text-2xl font-black">${new Date(event.date).toLocaleDateString('en-US', { day: 'numeric' })}</span>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors">${event.title}</h3>
+                    <div class="flex items-center gap-2 text-gray-500 text-sm mt-1 font-medium">
+                        <i data-lucide="clock" class="w-4 h-4 text-brand-500"></i> ${event.time}
+                    </div>
+                </div>
+            </div>
+            <div class="text-right sm:block hidden">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest bg-gray-50 px-3 py-1 rounded-full border border-gray-200">
+                    View Details
+                </span>
+            </div>
+        </div>
+    `).join('');
+    if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+}
+renderCalendar();
+renderEventsPreview();
 
 function renderCalendar() {
     const grid = document.getElementById('calendar-grid');
@@ -3005,10 +3190,9 @@ function renderCalendar() {
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const daysInPrevMonth = new Date(year, month, 0).getDate();
 
-    // THE FIX: We use a hardcoded inline style so it cannot be ignored by Tailwind
-    // We also use exactly 42 cells (6 rows) every single time.
-    const cellStyle = "height: 130px; max-height: 130px;";
-    const emptyCellClass = "bg-gray-50 p-2 w-full";
+// THE FIX: Enforce strict min, max, and exact height so empty cells never shrink
+    const cellStyle = ""; // No longer needed, the Grid container handles it!
+    const emptyCellClass = "bg-gray-50 p-2 w-full h-full min-h-0";
 
     // 1. Previous month's trailing days
     for (let i = firstDay - 1; i >= 0; i--) {
@@ -3021,7 +3205,7 @@ function renderCalendar() {
         const dayEvents = churchEvents.filter(e => e.date === dateString);
 
         // Active Cell Classes: Added overflow-y-auto so a busy day will scroll inside its own box
-        let dayHTML = `<div class="bg-white w-full p-2 overflow-y-auto flex flex-col hover:bg-gray-50 transition-colors ${dayEvents.length > 0 ? 'ring-inset ring-2 ring-brand-400' : ''}" style="${cellStyle}">`;
+        let dayHTML = `<div class="bg-white w-full h-full min-h-0 p-2 overflow-y-auto flex flex-col hover:bg-gray-50 transition-colors ${dayEvents.length > 0 ? 'ring-inset ring-2 ring-brand-400' : ''}">`;
         
         // Date Number
         dayHTML += `<span class="text-gray-900 text-sm mb-1 flex-shrink-0 sticky top-0 bg-white/90 backdrop-blur-sm z-10 ${dayEvents.length > 0 ? 'font-bold' : 'font-medium'}">${day}</span>`;

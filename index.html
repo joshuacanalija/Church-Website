@@ -82,7 +82,7 @@
                     <a href="#" onclick="event.preventDefault(); showPage('ministries-page')" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Ministries</a>
                     
                     <a href="#" onclick="event.preventDefault(); showPage('events-page')" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Events</a>
-                    <a href="#sermons" onclick="showPage('home-page')" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sermons</a>
+                    <a href="#" onclick="event.preventDefault(); showPage('sermons-page')" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sermons</a>
                     
                     <!-- UPDATED: Corrected onclick to show 'teachings' page -->
                     <a href="#" onclick="event.preventDefault(); showPage('teachings')" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Teachings</a>
@@ -116,7 +116,7 @@
                 <a href="#" onclick="event.preventDefault(); showPage('ministries-page'); closeMobileMenu()" class="block px-3 py-3 text-lg font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-md">Ministries</a>
                 
                 <a href="#" onclick="event.preventDefault(); showPage('events-page'); closeMobileMenu()" class="block px-3 py-3 text-lg font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-md">Events</a>
-                <a href="#sermons" onclick="showPage('home-page'); closeMobileMenu()" class="block px-3 py-3 text-lg font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-md">Sermons</a>
+                <a href="#" onclick="event.preventDefault(); showPage('sermons-page'); closeMobileMenu()" class="block px-3 py-3 text-lg font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-md">Sermons</a>
                 
                 <!-- UPDATED: Corrected onclick to show 'teachings' page -->
                 <a href="#" onclick="event.preventDefault(); showPage('teachings'); closeMobileMenu()" class="block px-3 py-3 text-lg font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-md">Teachings</a>
@@ -217,110 +217,177 @@
             </section>
 
             <!-- Weekly Fellowship Schedule -->
-            <section id="weekly-fellowship" class="py-20 bg-brand-50 border-t border-brand-100">
-                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Weekly Fellowship</h2>
-                        <p class="text-gray-600 text-lg">Join us throughout the week for prayer, praise, and fellowship.</p>
-                        <div class="h-1 w-24 bg-brand-600 mx-auto rounded-full mt-6"></div>
+            <section id="weekly-fellowship" class="py-24 bg-white border-t border-gray-100">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="text-center mb-14">
+                        <span class="text-brand-600 font-bold uppercase tracking-widest text-xs">Every Week</span>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mt-2 mb-3">Weekly Fellowship</h2>
+                        <p class="text-gray-500 text-base max-w-xl mx-auto">Join us throughout the week for prayer, praise, and fellowship across all our ministries.</p>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <!-- Weekday & Saturday Column -->
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                <i data-lucide="calendar" class="w-5 h-5 text-brand-600"></i> Midweek & Saturday
-                            </h3>
-                            
-                            <!-- Wednesday -->
-                            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand-500 hover:shadow-md transition-shadow">
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <h4 class="font-bold text-gray-900 text-lg">Prayer Meeting</h4>
-                                        <p class="text-gray-500 font-medium mt-1">Every Wednesday</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+
+                        <!-- SUNDAY -->
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="h-1 w-5 rounded-full bg-brand-600"></div>
+                                <span class="text-xs font-black uppercase tracking-widest text-brand-600">Sunday</span>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Children's Worship</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">6:00 AM &amp; 9:00 AM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Salvation &amp; Praise Fellowship Center</p>
                                     </div>
-                                    <div class="bg-brand-100 p-3 rounded-full text-brand-600">
-                                        <i data-lucide="users" class="w-5 h-5"></i>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Men's &amp; Women's Fellowship</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">2:00 PM &#8211; 4:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Salvation &amp; Praise Fellowship Center</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Tweens Ministry</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">4:30 PM &#8211; 6:30 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Children Church</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Young Couple's Ministry</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">4:30 PM &#8211; 6:30 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Bethesda Function Hall</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Youth Fellowship</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">5:00 PM &#8211; 7:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Salvation &amp; Praise Fellowship Center</p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Friday -->
-                            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand-500 hover:shadow-md transition-shadow">
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <h4 class="font-bold text-gray-900 text-lg">Chain Prayer</h4>
-                                        <p class="text-gray-500 font-medium mt-1">Every Friday • 5:00 AM - 5:00 PM</p>
-                                    </div>
-                                    <div class="bg-brand-100 p-3 rounded-full text-brand-600">
-                                        <i data-lucide="clock" class="w-5 h-5"></i>
-                                    </div>
-                                </div>
+                        <!-- MONDAY -->
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="h-1 w-5 rounded-full bg-brand-600"></div>
+                                <span class="text-xs font-black uppercase tracking-widest text-brand-600">Monday</span>
                             </div>
-
-                            <!-- Saturday -->
-                            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand-500 hover:shadow-md transition-shadow">
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <h4 class="font-bold text-gray-900 text-lg">Morning Praise</h4>
-                                        <p class="text-gray-500 font-medium mt-1">Every Saturday • 5:00 AM</p>
-                                    </div>
-                                    <div class="bg-brand-100 p-3 rounded-full text-brand-600">
-                                        <i data-lucide="sun" class="w-5 h-5"></i>
+                            <div class="flex flex-col gap-3">
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Prayer Warriors</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">10:00 AM &#8211; 2:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Happy Home 3rd Floor</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Sunday Afternoon Column -->
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                <i data-lucide="sun" class="w-5 h-5 text-brand-600"></i> Sunday Afternoons
-                            </h3>
-
-                            <!-- Men & Women -->
-                            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand-500 hover:shadow-md transition-shadow">
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <h4 class="font-bold text-gray-900 text-lg">Men's & Women's Fellowship</h4>
-                                        <p class="text-gray-500 font-medium mt-1">Every Sunday • 2:00 PM</p>
-                                    </div>
-                                    <div class="bg-brand-100 p-3 rounded-full text-brand-600">
-                                        <i data-lucide="heart-handshake" class="w-5 h-5"></i>
-                                    </div>
-                                </div>
+                        <!-- WEDNESDAY -->
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="h-1 w-5 rounded-full bg-brand-600"></div>
+                                <span class="text-xs font-black uppercase tracking-widest text-brand-600">Wednesday</span>
                             </div>
-
-                            <!-- Tweens -->
-                            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand-500 hover:shadow-md transition-shadow">
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <h4 class="font-bold text-gray-900 text-lg">Tweens Ministry</h4>
-                                        <p class="text-gray-500 font-medium mt-1">Every Sunday • 4:30 PM</p>
-                                    </div>
-                                    <div class="bg-brand-100 p-3 rounded-full text-brand-600">
-                                        <i data-lucide="smile" class="w-5 h-5"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Youth -->
-                            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand-500 hover:shadow-md transition-shadow">
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <h4 class="font-bold text-gray-900 text-lg">Youth Fellowship</h4>
-                                        <p class="text-gray-500 font-medium mt-1">Every Sunday • 5:00 PM</p>
-                                    </div>
-                                    <div class="bg-brand-100 p-3 rounded-full text-brand-600">
-                                        <i data-lucide="flame" class="w-5 h-5"></i>
+                            <div class="flex flex-col gap-3">
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Prayer Meeting</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">5:00 PM &#8211; 6:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Salvation &amp; Praise Fellowship Center</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- FRIDAY -->
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="h-1 w-5 rounded-full bg-brand-600"></div>
+                                <span class="text-xs font-black uppercase tracking-widest text-brand-600">Friday</span>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Chain Prayer</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">5:00 AM &#8211; 5:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Salvation &amp; Praise Fellowship Center</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Youth Fellowship</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">6:30 PM &#8211; 8:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Bethesda Function Hall</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Young Adult's Ministry</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">7:00 PM &#8211; 8:30 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Children Church</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <div class="flex items-start justify-between gap-2">
+                                        <p class="font-bold text-gray-900 text-sm leading-snug">Young Professional's</p>
+                                        <span class="text-[10px] font-bold bg-brand-50 text-brand-500 border border-brand-100 px-1.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">Bi-weekly</span>
+                                    </div>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">9:00 PM &#8211; 10:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Online</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SATURDAY -->
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="h-1 w-5 rounded-full bg-brand-600"></div>
+                                <span class="text-xs font-black uppercase tracking-widest text-brand-600">Saturday</span>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Morning Praise</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">5:00 AM &#8211; 6:00 AM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Salvation &amp; Praise Fellowship Center</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-brand-200 hover:shadow-sm transition-all">
+                                    <p class="font-bold text-gray-900 text-sm leading-snug">Wheel's Ministry</p>
+                                    <p class="text-brand-600 font-semibold text-xs mt-1">6:00 PM &#8211; 8:00 PM</p>
+                                    <div class="flex items-start gap-1 mt-2">
+                                        <svg class="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                        <p class="text-gray-400 text-xs leading-snug">Under the tree outside S&amp;P Fellowship Center</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
-
             <!-- About Section Summary -->
             <section id="about" class="py-20 bg-brand-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,11 +489,17 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- View All Ministries Button -->
+                    <div class="text-center mt-10">
+                        <button onclick="showPage('ministries-page')" class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white rounded-full font-bold hover:bg-brand-600 transition-all duration-300 group">
+                            View All Ministries
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
                 </div>
                 
             </section>
-
-            <!-- Latest Sermon / Media Section -->
             <section id="sermons" class="py-20 bg-brand-900 text-white relative overflow-hidden">
                 <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-800 opacity-30 blur-3xl"></div>
                 <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-800 opacity-30 blur-3xl"></div>
@@ -434,21 +507,21 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="space-y-6">
-                            <span class="text-brand-200 font-semibold tracking-wider uppercase text-sm">Latest Series</span>
+                            <span class="text-brand-200 font-semibold tracking-wider uppercase text-sm">Latest Sermon</span>
                             <h2 class="text-4xl md:text-5xl font-serif font-bold leading-tight">Walking Through <br/><span class="text-white">The Wilderness</span></h2>
                             <p class="text-gray-400 text-lg leading-relaxed">
                                 Join us as we explore the book of Exodus and discover how God guides us through the difficult seasons of life.
                             </p>
                             <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                                <button class="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-brand-100 transition-colors flex items-center justify-center gap-2">
+                                <button onclick="openSermonModal('dQw4w9WgXcQ', 'Walking Through The Wilderness', 'Ptr. [Your Pastor Name]')" class="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-brand-100 transition-colors flex items-center justify-center gap-2">
                                     <i data-lucide="play" class="w-4 h-4 fill-current text-brand-600"></i> Watch Latest Sermon
                                 </button>
-                                <button class="border border-gray-600 text-white px-6 py-3 rounded-full font-bold hover:bg-brand-800 hover:border-brand-800 transition-colors">
-                                    View Archive
+                                <button onclick="showPage('sermons-page')" class="border border-gray-600 text-white px-6 py-3 rounded-full font-bold hover:bg-brand-800 hover:border-brand-800 transition-colors">
+                                    View More
                                 </button>
                             </div>
                         </div>
-                        <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video group cursor-pointer border border-brand-800">
+                        <div onclick="openSermonModal('dQw4w9WgXcQ', 'Walking Through The Wilderness', 'Ptr. [Your Pastor Name]')" class="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video group cursor-pointer border border-brand-800">
                              <img src="https://images.unsplash.com/photo-1490127252417-7c393f9d3102?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Sermon Thumbnail" class="w-full h-full object-cover opacity-60 grayscale group-hover:opacity-40 transition-all">
                              <div class="absolute inset-0 flex items-center justify-center">
                                  <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/40">
@@ -519,7 +592,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-gray-900">Email</h4>
-                                        <p class="text-gray-600">happychurcozamizcity@gmail.com</p>
+                                        <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8de5ecfdfdf4eee5f8ffeee2f7ece0e4f7eee4f9f4cdeae0ece4e1a3eee2e0">[email&#160;protected]</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -565,6 +638,38 @@
                                 <button type="submit" class="w-full bg-brand-600 text-white font-bold py-3 rounded-lg hover:bg-brand-700 transition-colors shadow-md">
                                     Send Message
                                 </button>
+
+                                <!-- Divider -->
+                                <div class="flex items-center gap-3 pt-1">
+                                    <div class="flex-grow h-px bg-gray-200"></div>
+                                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">or reach us directly</span>
+                                    <div class="flex-grow h-px bg-gray-200"></div>
+                                </div>
+
+                                <!-- Messenger & Mobile Buttons -->
+                                <div class="grid grid-cols-2 gap-3">
+                                    <!-- Messenger -->
+                                    <a href="https://m.me/salvationandpraisefellowship" target="_blank" rel="noopener noreferrer"
+                                       class="flex items-center justify-center gap-2 bg-[#0099FF] hover:bg-[#007ACC] text-white font-bold py-3 rounded-lg transition-colors shadow-sm text-sm">
+                                        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.913 1.454 5.512 3.726 7.21V22l3.405-1.869c.909.252 1.871.388 2.869.388 5.523 0 10-4.144 10-9.259C22 6.145 17.523 2 12 2zm1.008 12.468l-2.548-2.72-4.976 2.72 5.476-5.815 2.608 2.72 4.916-2.72-5.476 5.815z"/>
+                                        </svg>
+                                        Messenger
+                                    </a>
+                                    <!-- Mobile / SMS -->
+                                    <a href="sms:+639688800836" 
+                                       class="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg transition-colors shadow-sm text-sm">
+                                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                                        </svg>
+                                        Send SMS
+                                    </a>
+                                </div>
+
+                                <!-- Phone number hint -->
+                                <p class="text-center text-xs text-gray-400">
+                                    Mobile: <a href="tel:+639688800836" class="font-semibold text-gray-500 hover:text-brand-600 transition-colors">0968 880 0836</a>
+                                </p>
                             </form>
                         </div>
                     </div>
@@ -2057,6 +2162,172 @@
             </div>
         </section>
 
+        <!-- ===== SERMONS PAGE ===== -->
+        <section id="sermons-page" class="page-section hidden pt-28 pb-20 bg-gray-50 min-h-screen">
+
+            <!-- Page Header -->
+            <div class="max-w-7xl mx-auto px-6 mb-12 text-center animate-fade-in-up">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Watch & Listen</span>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-4">Sermons</h1>
+                <p class="text-gray-500 max-w-xl mx-auto text-lg">Watch our latest messages from our YouTube channel, right here on the site.</p>
+                <a href="https://www.youtube.com/@salvationandpraisefellowsh8573" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 mt-5 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full transition-all shadow-md text-sm">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    Visit Our YouTube Channel
+                </a>
+            </div>
+
+            <!-- Sermon Cards Grid -->
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="sermon-cards-grid">
+
+                    <!-- Sermon Card 1 -->
+                    <div class="group bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer" onclick="openSermonModal('dQw4w9WgXcQ', 'Walking Through The Wilderness', 'Ptr. [Your Pastor Name]')">
+                        <div class="relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sermon Thumbnail" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                                <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-brand-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">Latest</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-1">Walking Through The Wilderness</h3>
+                            <p class="text-sm text-gray-500 font-medium">Ptr. [Your Pastor Name]</p>
+                        </div>
+                    </div>
+
+                    <!-- Sermon Card 2 -->
+                    <div class="group bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer" onclick="openSermonModal('dQw4w9WgXcQ', 'The Gift of Grace', 'Ptr. [Your Pastor Name]')">
+                        <div class="relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sermon Thumbnail" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                                <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-brand-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-1">The Gift of Grace</h3>
+                            <p class="text-sm text-gray-500 font-medium">Ptr. [Your Pastor Name]</p>
+                        </div>
+                    </div>
+
+                    <!-- Sermon Card 3 -->
+                    <div class="group bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer" onclick="openSermonModal('dQw4w9WgXcQ', 'Faith Over Fear', 'Ptr. [Your Pastor Name]')">
+                        <div class="relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sermon Thumbnail" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                                <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-brand-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-1">Faith Over Fear</h3>
+                            <p class="text-sm text-gray-500 font-medium">Ptr. [Your Pastor Name]</p>
+                        </div>
+                    </div>
+
+                    <!-- Sermon Card 4 -->
+                    <div class="group bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer" onclick="openSermonModal('dQw4w9WgXcQ', 'The Power of Prayer', 'Ptr. [Your Pastor Name]')">
+                        <div class="relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sermon Thumbnail" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                                <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-brand-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-1">The Power of Prayer</h3>
+                            <p class="text-sm text-gray-500 font-medium">Ptr. [Your Pastor Name]</p>
+                        </div>
+                    </div>
+
+                    <!-- Sermon Card 5 -->
+                    <div class="group bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer" onclick="openSermonModal('dQw4w9WgXcQ', 'Living in the Spirit', 'Ptr. [Your Pastor Name]')">
+                        <div class="relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sermon Thumbnail" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                                <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-brand-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-1">Living in the Spirit</h3>
+                            <p class="text-sm text-gray-500 font-medium">Ptr. [Your Pastor Name]</p>
+                        </div>
+                    </div>
+
+                    <!-- Sermon Card 6 -->
+                    <div class="group bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer" onclick="openSermonModal('dQw4w9WgXcQ', 'Called to Serve', 'Ptr. [Your Pastor Name]')">
+                        <div class="relative overflow-hidden">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sermon Thumbnail" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                                <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-brand-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-1">Called to Serve</h3>
+                            <p class="text-sm text-gray-500 font-medium">Ptr. [Your Pastor Name]</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- View More on YouTube CTA -->
+                <div class="text-center mt-14">
+                    <p class="text-gray-500 mb-4 text-sm">Want to see all of our messages?</p>
+                    <a href="https://www.youtube.com/@salvationandpraisefellowsh8573" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 border-2 border-brand-600 text-brand-600 hover:bg-brand-600 hover:text-white font-bold px-8 py-3 rounded-full transition-all duration-300 text-sm">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        View Full Sermon Archive on YouTube
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Video Modal -->
+        <div id="sermon-modal" class="fixed inset-0 z-[999] flex items-center justify-center hidden" onclick="closeSermonModal(event)">
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+            <div class="relative z-10 w-full max-w-4xl mx-4">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between mb-3 px-1">
+                    <div>
+                        <p id="modal-title" class="text-white font-bold text-lg leading-tight"></p>
+                        <p id="modal-speaker" class="text-gray-400 text-sm mt-0.5"></p>
+                    </div>
+                    <button onclick="forceCloseSermonModal()" class="text-white/70 hover:text-white transition-colors ml-4 flex-shrink-0">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+                <!-- Video Embed -->
+                <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black" style="padding-top: 56.25%;">
+                    <iframe id="sermon-iframe"
+                        class="absolute inset-0 w-full h-full"
+                        src=""
+                        title="Sermon Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- Watch on YouTube link -->
+                <div class="text-center mt-4">
+                    <a id="modal-yt-link" href="#" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-gray-300 hover:text-white text-sm transition-colors">
+                        <svg class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        Watch on YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <!-- Teachings Section (New) -->
         <section id="teachings" class="page-section hidden pt-32 pb-20 max-w-7xl mx-auto px-6">
             
@@ -2071,9 +2342,11 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Series 1: Salvation -->
                     <div class="group cursor-pointer bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all overflow-hidden flex flex-col h-full" onclick="openSeries('series-salvation')">
-                        <!-- Uniform Header Height: h-48 & Uniform Color: bg-brand-600 -->
-                        <div class="bg-brand-600 h-48 flex items-center justify-center w-full">
-                            <i data-lucide="cross" class="w-16 h-16 text-white/90"></i>
+                        <div class="bg-brand-600 h-48 w-full relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+                            <div class="absolute bottom-5 left-6">
+                                <span class="text-white/40 font-serif font-bold text-7xl leading-none select-none">01</span>
+                            </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-2">Salvation Series</h3>
@@ -2086,8 +2359,11 @@
 
                     <!-- Series 2: Growing in Christ (Personal) -->
                     <div class="group cursor-pointer bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all overflow-hidden flex flex-col h-full" onclick="openSeries('series-growing-personal')">
-                        <div class="bg-brand-600 h-48 flex items-center justify-center w-full">
-                            <i data-lucide="user" class="w-16 h-16 text-white/90"></i>
+                        <div class="bg-brand-700 h-48 w-full relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+                            <div class="absolute bottom-5 left-6">
+                                <span class="text-white/40 font-serif font-bold text-7xl leading-none select-none">02</span>
+                            </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-2">Growing in Christ (Personal)</h3>
@@ -2100,8 +2376,11 @@
 
                     <!-- Series 3: Growing in Christ (Relational) -->
                     <div class="group cursor-pointer bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all overflow-hidden flex flex-col h-full" onclick="openSeries('series-growing-relational')">
-                        <div class="bg-brand-600 h-48 flex items-center justify-center w-full">
-                            <i data-lucide="users" class="w-16 h-16 text-white/90"></i>
+                        <div class="bg-brand-800 h-48 w-full relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+                            <div class="absolute bottom-5 left-6">
+                                <span class="text-white/40 font-serif font-bold text-7xl leading-none select-none">03</span>
+                            </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-2">Growing in Christ (Relational)</h3>
@@ -2114,8 +2393,11 @@
 
                     <!-- Series 4: Growing in Christ (Familial) -->
                     <div class="group cursor-pointer bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all overflow-hidden flex flex-col h-full" onclick="openSeries('series-growing-familial')">
-                        <div class="bg-brand-600 h-48 flex items-center justify-center w-full">
-                            <i data-lucide="home" class="w-16 h-16 text-white/90"></i>
+                        <div class="bg-brand-600 h-48 w-full relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(-45deg, white 0, white 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+                            <div class="absolute bottom-5 left-6">
+                                <span class="text-white/40 font-serif font-bold text-7xl leading-none select-none">04</span>
+                            </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-2">Growing in Christ (Familial)</h3>
@@ -2128,8 +2410,11 @@
 
                     <!-- Series 5: End Times -->
                     <div class="group cursor-pointer bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all overflow-hidden flex flex-col h-full" onclick="openSeries('series-end-times')">
-                        <div class="bg-brand-600 h-48 flex items-center justify-center w-full">
-                            <i data-lucide="clock" class="w-16 h-16 text-white/90"></i>
+                        <div class="bg-brand-900 h-48 w-full relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(-45deg, white 0, white 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+                            <div class="absolute bottom-5 left-6">
+                                <span class="text-white/40 font-serif font-bold text-7xl leading-none select-none">05</span>
+                            </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-2">End Times Series</h3>
@@ -2850,6 +3135,7 @@
                         <li><a href="#" onclick="event.preventDefault(); showPage('mission-vision')" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> About Us</a></li>
                         <li><a href="#" onclick="event.preventDefault(); showPage('ministries-page')" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Ministries</a></li>
                         <li><a href="#" onclick="event.preventDefault(); showPage('events-page')" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Events</a></li>
+                        <li><a href="#" onclick="event.preventDefault(); showPage('sermons-page')" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Sermons</a></li>
                         <li><a href="#" onclick="event.preventDefault(); showPage('teachings')" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Teachings</a></li>
                         <li><a href="#" onclick="event.preventDefault(); showPage('give-page')" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Give</a></li>
                     </ul>
@@ -2867,11 +3153,23 @@
                             </div>
                         </li>
                         <li class="flex items-start gap-3 text-gray-400 text-sm border-t border-gray-800 pt-3">
-                            <i data-lucide="users" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
-                            <div>
-                                <p class="font-bold text-white mb-1">Midweek Meetings</p>
-                                <p>Prayer Meeting: Wed @ 5:00 PM</p>
-                                <p>Chain Prayer: Fri @ 5:00 AM</p>
+                            <i data-lucide="share-2" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                            <div class="w-full">
+                                <p class="font-bold text-white mb-3">Follow Us</p>
+                                <a href="https://www.facebook.com/happychurch.mainozamis" target="_blank" rel="noopener noreferrer"
+                                   class="flex items-center gap-3 group mb-2">
+                                    <div class="bg-[#1877F2] p-1.5 rounded-md flex-shrink-0">
+                                        <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    </div>
+                                    <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Salvation & Praise Fellowship</span>
+                                </a>
+                                <a href="https://www.youtube.com/@salvationandpraisefellowsh8573" target="_blank" rel="noopener noreferrer"
+                                   class="flex items-center gap-3 group">
+                                    <div class="bg-[#FF0000] p-1.5 rounded-md flex-shrink-0">
+                                        <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                    </div>
+                                    <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Salvation & Praise Fellowship</span>
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -2890,7 +3188,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
-                            <span>happychurcozamizcity@gmail.com</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f890998888819b908d8a9b9782999591829b918c81b89f95999194d69b9795">[email&#160;protected]</a></span>
                         </li>
                     </ul>
                 </div>
@@ -2898,7 +3196,7 @@
 
             <div class="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 text-sm text-center md:text-left">
-                    &copy; <script>document.write(new Date().getFullYear())</script> Salvation & Praise Fellowship. All rights reserved.
+                    &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Salvation & Praise Fellowship. All rights reserved.
                 </p>
                 <div class="flex gap-4 text-sm text-gray-500">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -2989,6 +3287,33 @@
             document.getElementById('ministries-grid').classList.remove('hidden');
         }
         // --- SERIES DETAIL LOGIC ---
+        // --- SERMON MODAL LOGIC ---
+        function openSermonModal(videoId, title, speaker) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-speaker').textContent = speaker;
+            document.getElementById('sermon-iframe').src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            document.getElementById('modal-yt-link').href = `https://www.youtube.com/watch?v=${videoId}`;
+            document.getElementById('sermon-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSermonModal(event) {
+            if (event && event.target !== document.getElementById('sermon-modal')) return;
+            document.getElementById('sermon-iframe').src = '';
+            document.getElementById('sermon-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function forceCloseSermonModal() {
+            document.getElementById('sermon-iframe').src = '';
+            document.getElementById('sermon-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { forceCloseSermonModal(); }
+        });
+
         function openSeries(seriesId) {
             // Hide the main gallery
             document.getElementById('teachings-gallery').classList.add('hidden');
@@ -3187,60 +3512,70 @@ window.renderCalendar = function() {
     const grid = document.getElementById('calendar-grid');
     const header = document.getElementById('calendar-month-year');
     if (!grid || !header) return;
-    
-    grid.innerHTML = ''; 
+
+    grid.innerHTML = '';
 
     const year = currentCalDate.getFullYear();
     const month = currentCalDate.getMonth();
     const today = new Date();
 
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     header.textContent = `${monthNames[month]} ${year}`;
 
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const daysInPrevMonth = new Date(year, month, 0).getDate();
 
-    const cellBaseClasses = "min-h-[100px] sm:min-h-[120px] p-2 border border-gray-100 w-full flex flex-col";
-    const emptyCellClass = `${cellBaseClasses} bg-gray-50 opacity-50`;
+    // Notion-style: use minimum rows needed (5 or 6), never pad to 6 if 5 is enough
+    const totalRequired = firstDay + daysInMonth;
+    const totalCells = totalRequired <= 35 ? 35 : 42;
+    const remainingCells = totalCells - totalRequired;
 
-    // Empty cells for previous month
+    const CELL_H = 120; // px — single source of truth for cell height
+    grid.style.gridAutoRows = CELL_H + 'px';
+
+    const cellBase = 'border border-gray-100 w-full flex flex-col overflow-hidden';
+    const emptyCell = `${cellBase} bg-gray-50 opacity-40`;
+
+    // Prev month filler
     for (let i = firstDay - 1; i >= 0; i--) {
-        grid.innerHTML += `<div class="${emptyCellClass}"><span class="text-gray-400 text-sm font-medium">${daysInPrevMonth - i}</span></div>`;
+        grid.innerHTML += `<div class="${emptyCell}" style="height:${CELL_H}px"><span class="text-gray-400 text-xs font-medium p-1.5 block">${daysInPrevMonth - i}</span></div>`;
     }
 
-    // Days for current month
+    // Current month days
     for (let day = 1; day <= daysInMonth; day++) {
-        const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-        const dayEvents = churchEvents.filter(e => e.date === dateString);
-        
-        const isToday = (day === today.getDate() && month === today.getMonth() && year === today.getFullYear());
-        const todayBgStyling = isToday ? 'bg-brand-50 border-2 border-brand-500 rounded-lg shadow-sm z-10 relative' : 'bg-white hover:bg-gray-50 transition-colors';
-        const dayTextStyling = isToday ? 'text-brand-600 font-bold bg-brand-100 rounded-full w-7 h-7 flex items-center justify-center' : 'text-gray-900';
+        const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+        const dayEvents = churchEvents.filter(e => e.date === dateStr);
+        const isToday = day === today.getDate() && month === today.getMonth() && year === today.getFullYear();
 
-        let dayHTML = `<div class="${cellBaseClasses} ${todayBgStyling} ${dayEvents.length > 0 ? 'ring-inset ring-1 ring-brand-100' : ''}">`;
-        dayHTML += `<span class="text-sm mb-1 flex-shrink-0 ${dayEvents.length > 0 && !isToday ? 'font-bold' : 'font-medium'} ${dayTextStyling}">${day}</span>`;
+        const cellBg = isToday ? 'background-color:#eff6ff;outline:2px solid #3b82f6;outline-offset:-2px;' : 'background-color:#ffffff;';
+        const numStyle = isToday
+            ? 'display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#3b82f6;color:#fff;font-weight:700;font-size:13px;'
+            : `font-size:13px;font-weight:${dayEvents.length > 0 ? '700' : '400'};color:#111827;`;
+
+        let html = `<div class="${cellBase}" style="height:${CELL_H}px;${cellBg}">`;
+        html += `<span class="p-1.5 flex-shrink-0" style="${numStyle}">${day}</span>`;
 
         if (dayEvents.length > 0) {
-            dayHTML += `<div class="space-y-1.5 overflow-y-auto flex-grow">`;
+            html += `<div style="padding:0 6px 6px;display:flex;flex-direction:column;gap:3px;overflow:hidden;">`;
             dayEvents.forEach(evt => {
-                const colorCode = evt.color === 'blue' ? 'blue' : 'brand';
-                // Trigger the modal exactly as it expects
-                dayHTML += `
-                <div onclick="window.openEvent('${evt.id}')" class="cursor-pointer bg-white border-l-4 border-${colorCode}-500 text-${colorCode}-700 text-[10px] sm:text-xs p-1.5 rounded shadow-sm hover:shadow hover:-translate-y-0.5 transition-all w-full text-left">
-                    <span class="font-bold block sm:inline">${evt.time}</span> <span title="${evt.title}" class="block sm:inline truncate">${evt.title}</span>
+                const isBlue = evt.color === 'blue';
+                const bg = isBlue ? '#eff6ff' : '#fef2f2';
+                const border = isBlue ? '#3b82f6' : '#ef4444';
+                const color = isBlue ? '#1d4ed8' : '#991b1b';
+                html += `<div onclick="window.openEvent('${evt.id}')" style="background:${bg};border-left:3px solid ${border};color:${color};font-size:11px;padding:2px 5px;border-radius:3px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${evt.title}">
+                    <strong>${evt.time}</strong> ${evt.title}
                 </div>`;
             });
-            dayHTML += `</div>`;
+            html += `</div>`;
         }
-        dayHTML += `</div>`;
-        grid.innerHTML += dayHTML;
+        html += `</div>`;
+        grid.innerHTML += html;
     }
 
-    const totalCells = firstDay + daysInMonth;
-    const remainingCells = 42 - totalCells; 
+    // Next month filler
     for (let i = 1; i <= remainingCells; i++) {
-        grid.innerHTML += `<div class="${emptyCellClass}"><span class="text-gray-400 text-sm font-medium">${i}</span></div>`;
+        grid.innerHTML += `<div class="${emptyCell}" style="height:${CELL_H}px"><span class="text-gray-400 text-xs font-medium p-1.5 block">${i}</span></div>`;
     }
 };
 
@@ -3309,68 +3644,7 @@ function setCalView(viewType) {
 }
 
 function renderCalendar() {
-    const grid = document.getElementById('calendar-grid');
-    const header = document.getElementById('calendar-month-year');
-    if (!grid || !header) return;
-    
-    grid.innerHTML = ''; // Clear previous
-
-    const year = currentCalDate.getFullYear();
-    const month = currentCalDate.getMonth();
-
-    // Set Header
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    header.textContent = `${monthNames[month]} ${year}`;
-
-    // Calculate days
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const daysInPrevMonth = new Date(year, month, 0).getDate();
-
-// THE FIX: Enforce strict min, max, and exact height so empty cells never shrink
-    const cellStyle = ""; // No longer needed, the Grid container handles it!
-    const emptyCellClass = "bg-gray-50 p-2 w-full h-full min-h-0";
-
-    // 1. Previous month's trailing days
-    for (let i = firstDay - 1; i >= 0; i--) {
-        grid.innerHTML += `<div class="${emptyCellClass}" style="${cellStyle}"><span class="text-gray-400 text-sm font-medium">${daysInPrevMonth - i}</span></div>`;
-    }
-
-    // 2. Current month's days
-    for (let day = 1; day <= daysInMonth; day++) {
-        const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-        const dayEvents = churchEvents.filter(e => e.date === dateString);
-
-        // Active Cell Classes: Added overflow-y-auto so a busy day will scroll inside its own box
-        let dayHTML = `<div class="bg-white w-full h-full min-h-0 p-2 overflow-y-auto flex flex-col hover:bg-gray-50 transition-colors ${dayEvents.length > 0 ? 'ring-inset ring-2 ring-brand-400' : ''}">`;
-        
-        // Date Number
-        dayHTML += `<span class="text-gray-900 text-sm mb-1 flex-shrink-0 sticky top-0 bg-white/90 backdrop-blur-sm z-10 ${dayEvents.length > 0 ? 'font-bold' : 'font-medium'}">${day}</span>`;
-
-        // Render events
-        if (dayEvents.length > 0) {
-            dayHTML += `<div class="space-y-1">`;
-            dayEvents.forEach(evt => {
-                const colorCode = evt.color === 'blue' ? 'blue' : 'brand';
-                dayHTML += `
-                <div class="bg-white border-l-4 border-${colorCode}-500 text-${colorCode}-700 text-[10px] sm:text-xs p-1 rounded shadow-sm hover:shadow-md transition-all truncate w-full">
-                    <span class="font-bold block sm:inline">${evt.time}</span> <span title="${evt.title}">${evt.title}</span>
-                </div>`;
-            });
-            dayHTML += `</div>`;
-        }
-        dayHTML += `</div>`;
-        grid.innerHTML += dayHTML;
-    }
-
-    // 3. Next month's leading days
-    const totalCells = firstDay + daysInMonth;
-    // ALWAYS render exactly 42 cells total (6 full rows) so the calendar never shrinks
-    const remainingCells = 42 - totalCells; 
-    
-    for (let i = 1; i <= remainingCells; i++) {
-        grid.innerHTML += `<div class="${emptyCellClass}" style="${cellStyle}"><span class="text-gray-400 text-sm font-medium">${i}</span></div>`;
-    }
+    window.renderCalendar();
 }
 
         function changeMonth(direction) {

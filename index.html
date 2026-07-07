@@ -132,30 +132,28 @@
         
         <!-- === HOME PAGE === -->
         <main id="home-page" class="page-section">
-            <!-- Hero Section -->
             <header class="relative h-screen flex items-center justify-center text-center px-4 hero-bg">
-                <div class="relative z-10 max-w-4xl mx-auto space-y-6 animate-fade-in-up">
-                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium tracking-wide uppercase border border-white/20 mb-2">
+                <div class="relative z-10 max-w-4xl mx-auto space-y-4 md:space-y-6 animate-fade-in-up mt-10 md:mt-0">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs md:text-sm font-medium tracking-wide uppercase border border-white/20 mb-2">
                         Welcome Home
                     </span>
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight">
                         Salvation and <span class="text-brand-200 italic">Praise</span>
                     </h1>
-                    <p class="mt-2 text-lg md:text-xl text-gray-300 font-serif italic">
+                    <p class="mt-2 text-base md:text-xl text-gray-300 font-serif italic">
                         “Your walls shall be called Salvation, and your gates Praise.” — Isaiah 60:18
                     </p>
-                    <p class="mt-4 text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p class="mt-4 text-base md:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed px-2">
                         Gather with us as we worship Jesus Christ, grow in His Word, and serve in love.
                     </p>
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#contact" class="px-8 py-4 bg-brand-600 text-white font-semibold rounded-full shadow-lg hover:bg-brand-500 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center px-4">
+                        <a href="#contact" class="px-6 py-3 md:px-8 md:py-4 bg-brand-600 text-white text-sm md:text-base font-semibold rounded-full shadow-lg hover:bg-brand-500 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
                             Join Us Sunday
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                         
-                        <!-- Watch Online Button with Tooltip and ID -->
                         <div class="relative group">
-                            <a id="hero-watch-btn" href="https://www.facebook.com/happychurch.mainozamis/live" target="_blank" class="px-8 py-4 bg-white text-gray-900 font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <a id="hero-watch-btn" href="https://www.facebook.com/happychurch.mainozamis/live" target="_blank" class="px-6 py-3 md:px-8 md:py-4 bg-white text-gray-900 text-sm md:text-base font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
                                 <i id="hero-live-icon" data-lucide="play-circle" class="w-4 h-4 text-brand-600"></i>
                                 Watch Online
                             </a>
@@ -167,49 +165,42 @@
                     </div>
                 </div>
                 
-                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div class="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
                     <a href="#about" class="text-white opacity-70 hover:opacity-100 transition-opacity">
                         <i data-lucide="chevron-down" class="w-8 h-8"></i>
                     </a>
                 </div>
             </header>
 
-            <!-- Service Times & Location Card -->
-            <section class="relative z-20 -mt-24 px-4 pb-16">
+            <section class="relative z-20 -mt-16 md:-mt-24 px-4 pb-12 md:pb-16">
                 <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
                     <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-                        <!-- Time -->
-                        <div class="p-8 text-center group hover:bg-gray-50 transition-colors">
-                            <div class="w-12 h-12 mx-auto bg-brand-100 rounded-full flex items-center justify-center mb-4 text-brand-600 group-hover:scale-110 transition-transform">
-                                <i data-lucide="clock" class="w-6 h-6"></i>
+                        <div class="p-6 md:p-8 text-center group hover:bg-gray-50 transition-colors">
+                            <div class="w-10 h-10 md:w-12 md:h-12 mx-auto bg-brand-100 rounded-full flex items-center justify-center mb-3 md:mb-4 text-brand-600 group-hover:scale-110 transition-transform">
+                                <i data-lucide="clock" class="w-5 h-5 md:w-6 md:h-6"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Service Times</h3>
-                            <p class="text-brand-600 font-semibold mb-2">Every Sunday</p>
-                            <p class="text-gray-600">1st Service: 6:00 AM - 8:00 AM</p>
-                            <p class="text-gray-600">2nd Service: 9:00 AM - 11:00 AM</p>
+                            <h3 class="text-base md:text-lg font-bold text-gray-900 mb-1 md:mb-2">Service Times</h3>
+                            <p class="text-brand-600 font-semibold text-sm md:text-base mb-1 md:mb-2">Every Sunday</p>
+                            <p class="text-gray-600 text-sm md:text-base">1st Service: 6:00 AM - 8:00 AM</p>
+                            <p class="text-gray-600 text-sm md:text-base">2nd Service: 9:00 AM - 11:00 AM</p>
                         </div>
-                        <!-- Location -->
-                        <div class="p-8 text-center group hover:bg-gray-50 transition-colors">
-                            <div class="w-12 h-12 mx-auto bg-brand-100 rounded-full flex items-center justify-center mb-4 text-brand-600 group-hover:scale-110 transition-transform">
-                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        <div class="p-6 md:p-8 text-center group hover:bg-gray-50 transition-colors">
+                            <div class="w-10 h-10 md:w-12 md:h-12 mx-auto bg-brand-100 rounded-full flex items-center justify-center mb-3 md:mb-4 text-brand-600 group-hover:scale-110 transition-transform">
+                                <i data-lucide="map-pin" class="w-5 h-5 md:w-6 md:h-6"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Location</h3>
-                            <p class="text-gray-600">Bernard Avenue</p>
-                            <p class="text-gray-600">Ozamiz, Misamis Occidental 7200</p>
+                            <h3 class="text-base md:text-lg font-bold text-gray-900 mb-1 md:mb-2">Location</h3>
+                            <p class="text-gray-600 text-sm md:text-base">Bernard Avenue</p>
+                            <p class="text-gray-600 text-sm md:text-base">Ozamiz, Misamis Occ. 7200</p>
                         </div>
-                        <!-- Online -->
-                        <div class="p-8 text-center group hover:bg-gray-50 transition-colors">
-                            <div id="card-icon-container" class="w-12 h-12 mx-auto bg-brand-100 rounded-full flex items-center justify-center mb-4 text-brand-600 group-hover:scale-110 transition-transform">
-                                <i data-lucide="wifi" class="w-6 h-6"></i>
+                        <div class="p-6 md:p-8 text-center group hover:bg-gray-50 transition-colors">
+                            <div id="card-icon-container" class="w-10 h-10 md:w-12 md:h-12 mx-auto bg-brand-100 rounded-full flex items-center justify-center mb-3 md:mb-4 text-brand-600 group-hover:scale-110 transition-transform">
+                                <i data-lucide="wifi" class="w-5 h-5 md:w-6 md:h-6"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Church Online</h3>
-                            <p class="text-gray-600">Live Stream Available</p>
+                            <h3 class="text-base md:text-lg font-bold text-gray-900 mb-1 md:mb-2">Church Online</h3>
+                            <p class="text-gray-600 text-sm md:text-base">Live Stream Available</p>
                             
                             <div class="relative inline-block group mt-1">
-                                <a id="card-watch-link" href="https://www.facebook.com/happychurch.mainozamis/live" target="_blank" class="text-brand-600 font-medium cursor-pointer hover:underline inline-block">Watch Live &rarr;</a>
-                                <span id="card-tooltip-text" class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-gray-900 text-white text-xs py-2 px-3 rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
-                                    Checking status...
-                                </span>
+                                <a id="card-watch-link" href="https://www.facebook.com/happychurch.mainozamis/live" target="_blank" class="text-brand-600 font-medium cursor-pointer hover:underline inline-block text-sm md:text-base">Watch Live →</a>
                             </div>
                         </div>
                     </div>
@@ -389,28 +380,28 @@
                 </div>
             </section>
             <!-- About Section Summary -->
-            <section id="about" class="py-20 bg-brand-50">
+            <section id="about" class="py-16 md:py-20 bg-brand-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Community gathering" class="rounded-2xl shadow-lg relative z-10 w-full object-cover h-[500px] grayscale hover:grayscale-0 transition-all duration-700" onerror="this.src='https://placehold.co/600x500/e2e8f0/64748b?text=Church+Community'">
-                            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-brand-200 rounded-full z-0 opacity-50"></div>
-                            <div class="absolute -top-6 -left-6 w-32 h-32 border-4 border-brand-200 rounded-2xl z-0"></div>
+                    <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+                        <div class="relative order-2 md:order-1 mt-8 md:mt-0 px-4 md:px-0">
+                            <img src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Community gathering" class="rounded-2xl shadow-lg relative z-10 w-full object-cover h-72 md:h-[500px] grayscale hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 w-20 h-20 md:w-24 md:h-24 bg-brand-200 rounded-full z-0 opacity-50"></div>
+                            <div class="absolute -top-4 -left-2 md:-top-6 md:-left-6 w-24 h-24 md:w-32 md:h-32 border-4 border-brand-200 rounded-2xl z-0"></div>
                         </div>
-                        <div class="space-y-6">
-                            <div class="inline-flex items-center gap-2 text-brand-600 font-semibold tracking-wide uppercase text-sm">
+                        <div class="space-y-4 md:space-y-6 order-1 md:order-2">
+                            <div class="inline-flex items-center gap-2 text-brand-600 font-semibold tracking-wide uppercase text-xs md:text-sm">
                                 <span class="w-8 h-[2px] bg-brand-600"></span>
                                 Who We Are
                             </div>
-                            <h2 class="text-4xl font-serif font-bold text-gray-900">A Place to Belong, Believe, and Become</h2>
-                            <p class="text-lg text-gray-600 leading-relaxed">
+                            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight">A Place to Belong, Believe, and Become</h2>
+                            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
                                 At Salvation & Praise Fellowship, we believe that church is more than a building—it's a family. We are dedicated to sharing the love of Christ, serving our community, and helping you discover your purpose.
                             </p>
-                            <p class="text-gray-600 leading-relaxed">
+                            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
                                 Whether you've been a believer for years or are just starting to ask questions about faith, there is a place for you here. Come as you are.
                             </p>
-                            <div class="pt-4">
-                                <button onclick="showPage('mission-vision')" class="text-brand-600 font-semibold hover:text-brand-800 flex items-center gap-2 group">
+                            <div class="pt-2 md:pt-4">
+                                <button onclick="showPage('mission-vision')" class="text-brand-600 font-semibold hover:text-brand-800 flex items-center gap-2 group text-sm md:text-base">
                                     Read our Mission & Vision
                                     <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
                                 </button>
@@ -421,85 +412,85 @@
             </section>
 
             <!-- Ministries Section -->
-            <section id="ministries" class="py-20 bg-white">
+            <section id="ministries" class="py-16 md:py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center max-w-3xl mx-auto mb-16">
-                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Connect and Grow</h2>
-                        <p class="text-gray-600 text-lg">We have ministries for every age and stage of life. Find your community within our community.</p>
+                    <div class="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3 md:mb-4">Connect and Grow</h2>
+                        <p class="text-gray-600 text-base md:text-lg">We have ministries for every age and stage of life. Find your community within our community.</p>
                     </div>
 
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <!-- Ministry Card 1: Men's Ministry -->
+                    <!--  Men's Card -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         <div onclick="showPage('ministries-page'); openMinistry('ministry-mens');" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1475483768296-6163e08872a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Men's Ministry">
+                            <img src="https://images.unsplash.com/photo-1475483768296-6163e08872a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-64 md:h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Men's Ministry">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 w-full h-48 p-6 text-white flex flex-col justify-end">
+                            <div class="absolute bottom-0 left-0 w-full h-48 p-5 md:p-6 text-white flex flex-col justify-end">
                                 <div class="mb-2 text-brand-200">
-                                    <i data-lucide="users" class="w-6 h-6"></i>
+                                    <i data-lucide="users" class="w-5 h-5 md:w-6 md:h-6"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold mb-2 leading-tight">Men's Ministry</h3>
-                                <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <h3 class="text-xl md:text-2xl font-bold mb-1 md:mb-2 leading-tight">Men's Ministry</h3>
+                                <p class="text-gray-300 text-xs md:text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                                     Equipping men to be leaders in their homes and community.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Ministry Card 2: Women's Ministry -->
+                        <!-- Women's Card -->
                         <div onclick="showPage('ministries-page'); openMinistry('ministry-womens');" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Women's Ministry">
+                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-64 md:h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Women's Ministry">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 w-full h-48 p-6 text-white flex flex-col justify-end">
+                            <div class="absolute bottom-0 left-0 w-full h-48 p-5 md:p-6 text-white flex flex-col justify-end">
                                 <div class="mb-2 text-brand-200">
-                                    <i data-lucide="heart" class="w-6 h-6"></i>
+                                    <i data-lucide="heart" class="w-5 h-5 md:w-6 md:h-6"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold mb-2 leading-tight">Women's Ministry</h3>
-                                <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <h3 class="text-xl md:text-2xl font-bold mb-1 md:mb-2 leading-tight">Women's Ministry</h3>
+                                <p class="text-gray-300 text-xs md:text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                                     Growing together in grace, love, and sisterhood.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Ministry Card 3: Youth -->
+                        <!-- Youth Card -->
                         <div onclick="showPage('ministries-page'); openMinistry('ministry-youth');" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Youth Ministry">
+                            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-64 md:h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Youth Ministry">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 w-full h-48 p-6 text-white flex flex-col justify-end">
+                            <div class="absolute bottom-0 left-0 w-full h-48 p-5 md:p-6 text-white flex flex-col justify-end">
                                 <div class="mb-2 text-brand-200">
-                                    <i data-lucide="flame" class="w-6 h-6"></i>
+                                    <i data-lucide="flame" class="w-5 h-5 md:w-6 md:h-6"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold mb-2 leading-tight">Youth Ministry</h3>
-                                <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <h3 class="text-xl md:text-2xl font-bold mb-1 md:mb-2 leading-tight">Youth Ministry</h3>
+                                <p class="text-gray-300 text-xs md:text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                                     Empowering the next generation to serve and lead.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Ministry Card 4: Kids -->
+                        <!-- Children's Card -->
                         <div onclick="showPage('ministries-page'); openMinistry('ministry-children');" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Kids Ministry">
+                            <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-64 md:h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" alt="Kids Ministry">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 w-full h-48 p-6 text-white flex flex-col justify-end">
+                            <div class="absolute bottom-0 left-0 w-full h-48 p-5 md:p-6 text-white flex flex-col justify-end">
                                 <div class="mb-2 text-brand-200">
-                                    <i data-lucide="smile" class="w-6 h-6"></i>
+                                    <i data-lucide="smile" class="w-5 h-5 md:w-6 md:h-6"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold mb-2 leading-tight">Children's Ministry</h3>
-                                <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <h3 class="text-xl md:text-2xl font-bold mb-1 md:mb-2 leading-tight">Children's Ministry</h3>
+                                <p class="text-gray-300 text-xs md:text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                                     Safe, fun, and biblical learning for children.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- View All Ministries Button -->
-                    <div class="text-center mt-10">
-                        <button onclick="showPage('ministries-page')" class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white rounded-full font-bold hover:bg-brand-600 transition-all duration-300 group">
+                    <!-- View all ministries -->
+                    <div class="text-center mt-8 md:mt-10">
+                        <button onclick="showPage('ministries-page')" class="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-3 bg-gray-900 text-white text-sm md:text-base rounded-full font-bold hover:bg-brand-600 transition-all duration-300 group">
                             View All Ministries
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </div>
                 </div>
-                
             </section>
+
             <section id="sermons" class="py-20 bg-brand-900 text-white relative overflow-hidden">
                 <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-800 opacity-30 blur-3xl"></div>
                 <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-800 opacity-30 blur-3xl"></div>
@@ -2931,40 +2922,134 @@
         </section>
 
         <!-- Church History Page -->
-  <section id="church-history" class="page-section hidden pt-32 pb-20 max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12 animate-fade-in-up">
+<section id="church-history" class="page-section hidden pt-32 pb-20 max-w-5xl mx-auto px-6">
+            
+            <div class="text-center mb-16 animate-fade-in-up">
                 <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Our Story</span>
-                <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-6">Church History</h1>
-                <div class="h-1 w-24 bg-brand-600 mx-auto rounded-full"></div>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2 mb-4">Salvation and Praise Fellowship</h1>
+                <h2 class="text-2xl font-medium text-gray-600 mb-6 italic">"Happy Church"</h2>
+                <div class="h-1 w-24 bg-brand-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
+                    Founded on the biblical promises of <strong>Isaiah 60:18</strong> and <strong>Psalm 144:15</strong>, our journey is a testament to God's unfailing love and provision.
+                </p>
             </div>
-            <div class="relative border-l-2 border-brand-200 ml-4 md:ml-0 md:pl-0 md:border-none md:grid md:grid-cols-1 md:gap-8">
-                <div class="prose prose-lg mx-auto text-gray-600 w-full max-w-none">
-                    <p>
-                        Salvation & Praise Fellowship began with a small group of believers gathering in a living room, united by a hunger for God's Word and a passion for worship. Over the years, God has faithfully expanded our territory, allowing us to touch countless lives in Ozamiz City and beyond.
-                    </p>
-                    <p>
-                        From our humble beginnings to our current campus on Bernard Avenue, our story is a testimony to God's faithfulness. Every brick, every service, and every saved soul is a chapter in the greater story God is writing through us.
-                    </p>
 
-                    <div class="relative w-full aspect-video my-10 rounded-2xl overflow-hidden shadow-xl border border-gray-200 bg-gray-100">
-                        <iframe 
-                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" 
-                            title="Salvation & Praise Fellowship Church History"
-                            class="absolute top-0 left-0 w-full h-full"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
+            <div class="relative mb-24">
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-brand-100"></div>
+
+                <div class="space-y-16 md:space-y-24">
+                    
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-brand-600 border-4 border-white shadow flex items-center justify-center z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="w-full md:w-5/12 mb-6 md:mb-0 md:pr-10 text-center md:text-right">
+                            <span class="text-brand-600 font-black text-xl tracking-tight mb-2 block uppercase">1982</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">The Seed is Planted</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                The late Pastora Elvie Go began a humble Bible study at Joe’s Trading on Zamora Street with just 15 people. The gathering grew faithfully to 50 people, leading Pastora Elvie to establish our very first divine worship service.
+                            </p>
+                        </div>
+                        
+                        <div class="w-full md:w-5/12 md:pl-10">
+                            <img src="https://images.unsplash.com/photo-1554188248-986adbb56375?auto=format&fit=crop&w=600&q=80" alt="Early church gathering" class="rounded-xl shadow-md w-full object-cover h-64 grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
                     </div>
 
-                    <blockquote class="border-l-4 border-brand-600 pl-4 italic text-gray-800 my-8">
-                        "We look back with gratitude and look forward with anticipation."
-                    </blockquote>
+                    <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group">
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-brand-600 border-4 border-white shadow flex items-center justify-center z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="w-full md:w-5/12 mb-6 md:mb-0 md:pl-10 text-center md:text-left">
+                            <span class="text-brand-600 font-black text-xl tracking-tight mb-2 block uppercase">Early 2007</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Tested by Fire</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Tragedy struck when our church building caught fire and burned to the ground. Yet, in a powerful display of God's sovereignty, after everything had turned to ashes, the only things left untouched were the Cross and the Bible.
+                            </p>
+                        </div>
+                        
+                        <div class="w-full md:w-5/12 md:pr-10">
+                            <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=600&q=80" alt="Faith through trials" class="rounded-xl shadow-md w-full object-cover h-64 grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-brand-600 border-4 border-white shadow flex items-center justify-center z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="w-full md:w-5/12 mb-6 md:mb-0 md:pr-10 text-center md:text-right">
+                            <span class="text-brand-600 font-black text-xl tracking-tight mb-2 block uppercase">Later 2007</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">A Season of Resilience</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Undeterred, the church relocated temporarily to the Ozamiz City Central School Gymnasium in Tinago. In a beautiful display of unity, the brethren and ministry workers banded together to personally make the chairs used for our divine services.
+                            </p>
+                        </div>
+                        
+                        <div class="w-full md:w-5/12 md:pl-10">
+                            <img src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?auto=format&fit=crop&w=600&q=80" alt="Church community working together" class="rounded-xl shadow-md w-full object-cover h-64 grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group">
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-brand-600 border-4 border-white shadow flex items-center justify-center z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="w-full md:w-5/12 mb-6 md:mb-0 md:pl-10 text-center md:text-left">
+                            <span class="text-brand-600 font-black text-xl tracking-tight mb-2 block uppercase">[YEAR]</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">A Permanent Home</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                God opened the doors for Salvation and Praise Fellowship Inc. to acquire our own land situated at Bernard, Lam-an Street in Ozamiz City, laying the foundation for our permanent spiritual home.
+                            </p>
+                        </div>
+                        
+                        <div class="w-full md:w-5/12 md:pr-10">
+                            <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=600&q=80" alt="New church property" class="rounded-xl shadow-md w-full object-cover h-64 grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-brand-600 border-4 border-white shadow flex items-center justify-center z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="w-full md:w-5/12 mb-6 md:mb-0 md:pr-10 text-center md:text-right">
+                            <span class="text-brand-600 font-black text-xl tracking-tight mb-2 block uppercase">Present Day</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Continuing the Mission</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Today, "Happy Church" stands strong. We continue to praise God for His faithfulness through the decades, pressing forward to reach our local community and beyond with the life-changing Gospel of Jesus Christ.
+                            </p>
+                        </div>
+                        
+                        <div class="w-full md:w-5/12 md:pl-10">
+                            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&q=80" alt="Current happy church congregation" class="rounded-xl shadow-md w-full object-cover h-64 grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900">A Firsthand Account</h3>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+                        Listen as a member of our Board of Trustees shares a personal narrative of the defining moments, trials, and the enduring faithfulness of God that shaped our church family over the decades.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl border border-gray-200 bg-gray-100 group">
+                    <iframe 
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" 
+                        title="Salvation & Praise Fellowship Church History Interview"
+                        class="absolute top-0 left-0 w-full h-full"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="text-center bg-brand-50 p-10 rounded-2xl border border-brand-100 shadow-sm">
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-gray-900 italic max-w-3xl mx-auto leading-relaxed">
+                    "Happy are the people whose God is the Lord." <br>
+                    <span class="text-lg text-brand-600 font-sans not-italic block mt-4">- Psalm 144:15</span>
+                </h3>
+            </div>
+            
         </section>
-    </div>
 
 <!-- Giving Page -->
   <section id="give-page" class="page-section hidden pt-32 pb-20 max-w-7xl mx-auto px-6">
@@ -3508,6 +3593,7 @@ window.closeEvent = function() {
 };
 
 // Render the Calendar Grid
+// Render the Calendar Grid
 window.renderCalendar = function() {
     const grid = document.getElementById('calendar-grid');
     const header = document.getElementById('calendar-month-year');
@@ -3563,8 +3649,10 @@ window.renderCalendar = function() {
                 const bg = isBlue ? '#eff6ff' : '#fef2f2';
                 const border = isBlue ? '#3b82f6' : '#ef4444';
                 const color = isBlue ? '#1d4ed8' : '#991b1b';
+                
+                // UPDATED LINE BELOW: Removed <strong>${evt.time}</strong>
                 html += `<div onclick="window.openEvent('${evt.id}')" style="background:${bg};border-left:3px solid ${border};color:${color};font-size:11px;padding:2px 5px;border-radius:3px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${evt.title}">
-                    <strong>${evt.time}</strong> ${evt.title}
+                    ${evt.title}
                 </div>`;
             });
             html += `</div>`;
